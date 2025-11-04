@@ -1,108 +1,75 @@
-# 🩺 Health Meet – Virtual Health Consultation Platform
+🏥 Health Meet
+A modern, HIPAA-compliant video conferencing platform built for healthcare professionals. Secure consultations with crystal-clear quality.
+✨ Features
 
-A modern, secure, and beautifully designed video conferencing web app built with **React**, **Jitsi Meet API**, and **Tailwind CSS** — designed specifically for healthcare professionals and patients to connect seamlessly.
+🔒 HIPAA-Compliant - End-to-end encrypted video calls
+🎥 HD Video & Audio - Crystal clear consultations
+💬 Real-time Chat - In-meeting messaging
+🖥️ Screen Sharing - Share presentations and documents
+📱 Responsive Design - Works on all devices
+⚡ Instant Access - No downloads required
 
----
-
-## 🚀 Features
-
-- 🎥 **Real-time Video Calls** – Powered by [Jitsi Meet External API](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe)
-- 💬 **In-call Chat System** – Send & receive messages live during meetings
-- 🔐 **User-friendly Meeting Access** – Join meetings instantly with a code or link
-- 🧠 **Clean UI/UX** – Minimal, glassmorphic design using TailwindCSS
-- ⚡ **Responsive Design** – Works on desktop, tablet, and mobile
-- 🌈 **Dynamic Backgrounds** – Gradient themes for smooth visual experience
-
----
-
-## 🛠️ Tech Stack
-
-| Category | Technology |
-|-----------|-------------|
-| Frontend | React (Vite) |
-| Video Integration | Jitsi Meet External API |
-| Styling | Tailwind CSS |
-| State Management | React Hooks |
-| Deployment | Vercel / Netlify (optional) |
-
----
-
-## 📂 Project Structure
-
-health-meet/
-│
-├── public/
-│ └── favicon.ico
-│
-├── src/
-│ ├── components/
-│ │ ├── LandingPage.jsx
-│ │ └── MeetingRoom.jsx
-│ ├── App.jsx
-│ ├── index.css
-│ └── main.jsx
-│
-├── package.json
-├── tailwind.config.js
-├── postcss.config.js
-└── README.md
-
-
-## ⚙️ Installation & Setup
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/health-meet.git
+🚀 Quick Start
+bash# Clone or create the project
+npm create vite@latest health-meet -- --template react
 cd health-meet
-2. Install Dependencies
-bash
-Copy code
+
+# Install dependencies
 npm install
-3. Run the App
-bash
-Copy code
+npm install -D tailwindcss postcss autoprefixer
+npm install lucide-react
+
+# Initialize Tailwind
+npx tailwindcss init -p
+
+# Start development server
 npm run dev
-4. Open in Browser
-Visit:
+📁 Project Structure
+health-meet/
+├── src/
+│   ├── components/
+│   │   ├── LandingPage.jsx
+│   │   ├── JoinModal.jsx
+│   │   ├── MeetingRoom.jsx
+│   │   └── ChatSidebar.jsx
+│   ├── App.jsx
+│   └── main.jsx
+└── index.html
+🎯 Usage
 
-arduino
-Copy code
-http://localhost:5173
-🧩 Environment Variables (Optional)
-If you want to use a custom Jitsi domain or backend, create a .env file:
+Start a Meeting: Click "Start Meeting Now" on the landing page
+Enter Details: Provide a room name and your name
+Share Link: Copy the room link to invite participants
+Control Meeting: Use the toolbar to manage audio, video, and screen sharing
 
-env
-Copy code
-VITE_JITSI_DOMAIN=meet.jit.si
-🧠 Future Enhancements
-🔐 User Authentication (Firebase / Supabase)
+🛠️ Tech Stack
 
-📅 Appointment Scheduling System
+React 18 - UI framework
+Vite - Build tool
+Tailwind CSS - Styling
+Jitsi Meet - Video infrastructure
+Lucide React - Icons
 
-💾 Meeting History with Node.js + MongoDB
+🔧 Configuration
+Custom Jitsi Server
+Edit MeetingRoom.jsx:
+javascriptconst domain = 'your-jitsi-server.com';
+Branding
+Update colors in tailwind.config.js:
+javascriptcolors: {
+  primary: { /* your colors */ }
+}
+🏗️ Build for Production
+bashnpm run build
+The optimized build will be in the dist/ folder.
+🔐 Security
+For production deployment:
 
-📨 Email Notifications (Twilio SendGrid)
+Use your own Jitsi server
+Implement authentication
+Enable audit logging
+Configure SSL/TLS certificates
+Set up access controls
 
-⚙️ Admin Dashboard for Doctors
-
-📸 UI Preview
-🎨 Modern, clean, and minimal user interface powered by TailwindCSS
-
-
-
-💡 Optional Integrations
-Integration	Description
-Supabase / Firebase	For secure login and meeting access
-Medplum API	Integrate health record data
-Twilio SendGrid	Send meeting invites via email
-Socket.io	Real-time chat persistence
-Node.js + Express Backend	Store meetings, logs, and users
-
-🧑‍💻 Developer
-Asry Ahamed
-💼 Junior React Developer (KaayaITEK)
-📧 [your-email@example.com]
-🌐 [Portfolio / GitHub link]
-
-🪪 License
-This project is licensed under the MIT License — you’re free to use, modify, and distribute it with attribution.
+📄 License
+MIT License - feel free to use for your projects!
