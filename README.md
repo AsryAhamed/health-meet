@@ -47,10 +47,6 @@ health-meet/
 ├── postcss.config.js
 └── README.md
 
-yaml
-Copy code
-
----
 
 ## ⚙️ Installation & Setup
 
